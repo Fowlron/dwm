@@ -60,6 +60,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "/home/pedro/.config/kitty/start_shell.sh", NULL };
 
 #include "selfrestart.c"
+#include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
     /* Basics */
@@ -72,6 +73,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+    { MODKEY|ShiftMask,             XK_j,       movestack,      {.i = +1} },
+    { MODKEY|ShiftMask,             XK_k,       movestack,      {.i = -1} },
 
 	//{ MODKEY,                       XK_Return, zoom,           {0} },
 
@@ -79,7 +82,6 @@ static Key keys[] = {
     { MODKEY,                       XK_Tab,     cyclelayout,    {.i = -1} },
     { MODKEY|ShiftMask,             XK_Tab,     cyclelayout,    {.i = +1} },
 	//{ MODKEY,                       XK_space,  setlayout,      {0} },
-	//{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
     { MODKEY|ShiftMask,             XK_space,   togglefloating, {0} },
 
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
