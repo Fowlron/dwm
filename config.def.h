@@ -10,7 +10,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = 6;
 static const int vertpadbar         = 7;
 
-static const char *fonts[]          = { "MesloLGS NF Regular:size=11" };
+static const char *fonts[]          = { "MesloLGS NF Regular:size=13" };
 static const char dmenufont[]       = "monospace:size=10";
 
 /* Colors */
