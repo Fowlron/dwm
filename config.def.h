@@ -22,7 +22,7 @@ static const char col_cyan[]        = "#924441";
 static const char *const autostart[] = {
     "picom", NULL, 
     NULL
-}
+};
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
