@@ -19,7 +19,6 @@ static const char col_gray4[]       = "#d7d7d7";
 static const char col_cyan[]        = "#924441";
 
 
-
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -91,15 +90,16 @@ static Key keys[] = {
 	{ MODKEY,                       XK_o,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_p,      incnmaster,     {.i = -1 } },
 
-    /* ZOOM??? */
-	{ MODKEY|ControlMask,           XK_Return, zoom,           {0} },
-
     /* Layout */
     { MODKEY,                       XK_Tab,     cyclelayout,    {.i = +1} },
     { MODKEY|ShiftMask,             XK_space,   togglefloating, {0} },
 
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
+
+    /* Gaps */
+    { MODKEY,                       XK_g,       setgaps,        {.i = +1} },
+    { MODKEY|ShiftMask,             XK_g,       setgaps,        {.i = -1} },
 
     /* Monitors */
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
