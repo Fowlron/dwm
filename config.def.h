@@ -22,7 +22,7 @@ static const char col_cyan[]        = "#924441";
 static const char *const autostart[] = {
     "picom", NULL, 
     "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1", NULL,
-    "bash", "~/.wallpaper/wallpaper_timer", NULL,
+    "bash", "/home/pedro/.wallpaper/wallpaper_timer", NULL,
     "xbindkeys", NULL,
     NULL
 };
