@@ -18,6 +18,11 @@ static const char col_gray3[]       = "#96b5b4";
 static const char col_gray4[]       = "#d7d7d7";
 static const char col_cyan[]        = "#924441";
 
+/* Autostart */
+static const char *const autostart[] = {
+    "picom", NULL, 
+    NULL
+}
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
