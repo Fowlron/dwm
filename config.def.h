@@ -12,11 +12,24 @@ static const char *fonts[]          = { "MesloLGS NF Regular:size=11" };
 static const char dmenufont[]       = "monospace:size=10";
 
 /* Colors */
-static const char col_gray1[]       = "#282a36";
-static const char col_gray2[]       = "#282a36";
-static const char col_gray3[]       = "#96b5b4";
-static const char col_gray4[]       = "#d7d7d7";
-static const char col_cyan[]        = "#924441";
+static const char col_gray1[]       = "#1D2330";
+static const char col_gray2[]       = "#4B5665";
+static const char col_gray3[]       = "#AD69AF";
+static const char col_gray4[]       = "#D1D7E1";
+static const char col_cyan[]        = "#84598D";
+static const char *colors[][3]      = {
+	/*               fg         bg         border   */
+	[SchemeNorm] = { col_gray4, col_gray1, col_gray2 },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+};
+
+static const unsigned int baralpha    = 0xee; 
+static const unsigned int borderalpha = OPAQUE;
+static const unsigned int alphas[][3] = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+};
 
 /* Autostart */
 static const char *const autostart[] = {
@@ -26,14 +39,6 @@ static const char *const autostart[] = {
     "xbindkeys", NULL,
     NULL
 };
-
-static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-};
-
-static const Bool viewontag         = True;
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -52,6 +57,7 @@ static const Rule rules[] = {
 static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const Bool viewontag  = True;
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
