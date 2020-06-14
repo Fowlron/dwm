@@ -39,7 +39,7 @@ static const char *const autostart[] = {
     "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1", NULL,
     "bash", "/home/pedro/.wallpaper/wallpaper_timer", NULL,
     "xbindkeys", NULL,
-    "slstatus", NULL,
+    "/home/pedro/.dwm/bar.sh", NULL,
     NULL
 };
 
